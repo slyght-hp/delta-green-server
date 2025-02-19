@@ -17,7 +17,7 @@
     hover:border-delta-green"
       on:click={correspondenceFn}
     >
-      Pinned Correspondence
+      Operation: Future/Perfect
       <span class="text-md text-gray-400">(1)</span>
     </button>
 
