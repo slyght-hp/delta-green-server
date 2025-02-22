@@ -16,7 +16,8 @@
   import AxiomThirtySixThoughFourty from '../components/axioms/AxiomThirtySixThoughFourty.svelte';
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
   import Preparations from '../components/Preparations.svelte';
-
+  import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte'; <!-- New import -->
+  
   let showLogin = false,
     showTypedHeader = true,
     loggedIn = false,
@@ -54,7 +55,7 @@
 
 <div class="mt-14 w-9/12 lg:w-3/5 xl:w-2/5 flex flex-col items-center">
   {#if loggedIn === false}
-    <Typewriter interval={47} on:done={() => (showLogin = true)}>
+    <Typewriter interval={47} on:done={() => (showLogin = true)} >
       <h1 class="text-3xl">
         Welcome to the <span class="text-5xl text-delta-green">Δ</span> Secure Server v24.8
       </h1>
@@ -67,7 +68,7 @@
     {/if}
   {:else}
     {#if showTypedHeader}
-      <Typewriter interval={47} on:done={() => { loading = true; showTypedHeader = false; }}>
+      <Typewriter interval={47} on:done={() => { loading = true; showTypedHeader = false; }} >
         <h1 class="text-3xl mb-5">
           Welcome <span class="text-delta-green times24">{$user}</span> to the
           <span class="text-5xl text-delta-green cursor-pointer">Δ</span> Secure Server
@@ -76,7 +77,7 @@
     {:else}
       <h1 class="text-3xl mb-5">
         Welcome <span class="text-delta-green times32">{$user}</span> to the
-        <button class="text-5xl text-delta-green cursor-pointer" on:click={() => (navigationOpen = true)}>Δ</button>
+        <button class="text-5xl text-delta-green cursor-pointer" on:click={() => (navigationOpen = true)} >Δ</button>
         Secure Server
       </h1>
     {/if}
@@ -91,7 +92,7 @@
 
     {#if axiomPreambleOpen}
       <AxiomPreamble on:finish={() => { axiomReadBtnAvailable = true; }} />
-
+      
       {#if axiomReadBtnAvailable}
         <button
           type="button"
@@ -119,6 +120,8 @@
       </Typewriter>
 
       {#if showAxioms}
+        <!-- Add AxiomsIntro component here before other Axiom components -->
+        <AxiomsIntro />  <!-- New component -->
         {#if axiom === 1} <AxiomOneThroughFive /> {/if}
         {#if axiom === 2} <AxiomSixThroughTen /> {/if}
         {#if axiom === 3} <AxiomElevenThroughFifteen /> {/if}
