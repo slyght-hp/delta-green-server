@@ -66,9 +66,7 @@
 <div class="mt-14 w-9/12 lg:w-3/5 xl:w-2/5 flex flex-col items-center">
   {#if loggedIn === false}
     <Typewriter interval={47} on:done={() => (showLogin = true)} >
-      <h1 class="text-3xl">
-        Welcome to the <span class="text-5xl text-delta-green">Δ</span> Secure Server v24.8
-      </h1>
+      <h1 class="text-3xl">Welcome to the <span class="text-5xl text-delta-green">Δ</span> Secure Server v24.8</h1>
     </Typewriter>
 
     {#if showLogin}
@@ -79,14 +77,13 @@
   {:else}
     {#if showTypedHeader}
       <Typewriter interval={47} on:done={() => { loading = true; showTypedHeader = false; }} >
-        <h1 class="text-3xl mb-5">
-          Welcome <span class="text-delta-green times24">{$user}</span> to the
-          <span class="text-5xl text-delta-green cursor-pointer">Δ</span> Secure Server
+        <h1 class="text-3xl mb-5">Welcome <span class="text-delta-green times24">{$user}</span> to the
+          <span class="text-5xl text-delta-green cursor-pointer">Δ</span>
+		  Secure Server
         </h1>
       </Typewriter>
     {:else}
-      <h1 class="text-3xl mb-5">
-        Welcome <span class="text-delta-green times32">{$user}</span> to the
+      <h1 class="text-3xl mb-5">Welcome <span class="text-delta-green times32">{$user}</span> to the
         <button class="text-5xl text-delta-green cursor-pointer" on:click={() => (navigationOpen = true)} >Δ</button>
         Secure Server
       </h1>
@@ -97,7 +94,9 @@
     {/if}
 
     {#if navigationOpen}
-      <Navigation correspondenceFn={() => { axiomPreambleOpen = true; navigationOpen = false; }} />
+      <Navigation
+		correspondenceFn={() => { axiomPreambleOpen = true; navigationOpen = false; }}
+	  />
     {/if}
 
     {#if axiomPreambleOpen}
@@ -115,7 +114,7 @@
 
         <button
           type="button"
-          class="mt-3 rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
+          class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
           on:click={() => { axiomPreambleOpen = false; preparationsOpen = true; }}
         >
           Open Attachment
