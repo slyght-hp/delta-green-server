@@ -83,7 +83,7 @@
       {/if}
 
       {#if loading}
-        <Decrypting on:finish={() => console.log('Decrypting complete');() => setTimeout(() => { loading = false; navigationOpen = true; }, 380)} />
+        <Decrypting on:finish={() => console.log('Decrypting complete');setTimeout(() => { loading = false; navigationOpen = true; }, 380)} />
       {/if}
 
       {#if navigationOpen}
