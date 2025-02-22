@@ -31,6 +31,16 @@
     showAxioms = false,
     showPreparations = false;
 
+  const jumpToNavigation = () => {
+    if (loading) loading = false;
+    if (axiomPreambleOpen) axiomPreambleOpen = false;
+    if (axiomReadBtnAvailable) axiomReadBtnAvailable = false;
+    if (axiomsOpen) axiomsOpen = false;
+    if (showAxioms) showAxioms = false;
+    axiom = 1;
+    navigationOpen = true;
+  }
+  
   const lastAxiom = () => {
     if (axiom === 1) {
       axiom = 10;
