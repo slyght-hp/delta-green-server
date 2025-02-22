@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { user } from '../stores/user';
   import Typewriter from 'svelte-typewriter';
   import LogInForm from '../components/LogInForm.svelte';
@@ -17,8 +17,7 @@
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
   import Preparations from '../components/Preparations.svelte';
   import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
-  <script lang="ts">
-  
+    
   let showLogin = false,
     showTypedHeader = true,
     loggedIn = false,
@@ -121,17 +120,16 @@
       </Typewriter>
 
       {#if showAxioms}
-        <!-- Add AxiomsIntro component here before other Axiom components -->
-        <AxiomsIntro />  <!-- New component -->
-        {#if axiom === 1} <AxiomOneThroughFive /> {/if}
-        {#if axiom === 2} <AxiomSixThroughTen /> {/if}
-        {#if axiom === 3} <AxiomElevenThroughFifteen /> {/if}
-        {#if axiom === 4} <AxiomSixteenThroughTwenty /> {/if}
-        {#if axiom === 5} <AxiomTwentyOneThroughTwentyFive /> {/if}
-        {#if axiom === 6} <AxiomTwentySixThroughThirty /> {/if}
-        {#if axiom === 7} <AxiomThirtyOneThroughThirtyFive /> {/if}
-        {#if axiom === 8} <AxiomThirtySixThoughFourty /> {/if}
-        {#if axiom === 9} <AxiomFourtyOneThroughFortyFour /> {/if}
+        {#if axiom === 1} <AxiomsIntro /> {/if}
+        {#if axiom === 2} <AxiomOneThroughFive /> {/if}
+        {#if axiom === 3} <AxiomSixThroughTen /> {/if}
+        {#if axiom === 4} <AxiomElevenThroughFifteen /> {/if}
+        {#if axiom === 5} <AxiomSixteenThroughTwenty /> {/if}
+        {#if axiom === 6} <AxiomTwentyOneThroughTwentyFive /> {/if}
+        {#if axiom === 7} <AxiomTwentySixThroughThirty /> {/if}
+        {#if axiom === 8} <AxiomThirtyOneThroughThirtyFive /> {/if}
+        {#if axiom === 9} <AxiomThirtySixThoughFourty /> {/if}
+        {#if axiom === 10} <AxiomFourtyOneThroughFortyFour /> {/if}
 
         <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
       {/if}
