@@ -13,7 +13,7 @@
   <p class="text-center pb-4"> It's up to you to find out why. </p>
 
   <ul class="flex flex-col items-center pb-4">
-    <li class="text-center w-full">Agent, your mission is as follows: </li>
+    <li class="text-center w-full"><span class="text-delta-green">Agent</span>, your mission is as follows: </li>
     <li class="self-start">1) Determine who or what is killing the people of Hellbend.</li>
     <li class="self-start">2) If the threat is unnatural, isolate it and destroy it.</li>
     <li class="self-start">3) Close the case so law enforcement doesn't look any closer.</li>
