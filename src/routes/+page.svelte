@@ -33,14 +33,14 @@
 
   const lastAxiom = () => {
     if (axiom === 1) {
-      axiom = 9;
+      axiom = 10;
     } else {
       axiom = axiom - 1;
     }
   };
 
   const nextAxiom = () => {
-    if (axiom === 9) {
+    if (axiom === 10) {
       axiom = 1;
     } else {
       axiom = axiom + 1;
