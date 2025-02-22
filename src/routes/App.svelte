@@ -15,7 +15,9 @@
   import AxiomThirtyOneThroughThirtyFive from '../components/axioms/AxiomThirtyOneThroughThirtyFive.svelte';
   import AxiomThirtySixThoughFourty from '../components/axioms/AxiomThirtySixThoughFourty.svelte';
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
-
+  import Preparations from '../components/Preparations.svelte';
+  import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
+  
   let showLogin = false,
     showTypedHeader = true,
     loggedIn = false,
@@ -24,9 +26,11 @@
     axiomPreambleOpen = false,
     axiomReadBtnAvailable = false,
     axiomsOpen = false,
-    axiom = 1,
+    preparationsOpen = false,
+	axiom = 1,
     showAxioms = false;
-
+	showPreparations = false;
+	
   const jumpToNavigation = () => {
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
@@ -39,14 +43,14 @@
 
   const lastAxiom = () => {
     if (axiom === 1) {
-      axiom = 9;
+      axiom = 10;
     } else {
       axiom = axiom - 1;
     }
   };
 
   const nextAxiom = () => {
-    if (axiom === 9) {
+    if (axiom === 10) {
       axiom = 1;
     } else {
       axiom = axiom + 1;
@@ -101,6 +105,16 @@
             <span class="text-md text-gray-400">(Axioms.txt)</span>
           </button>
         {/if}
+		
+          <button
+            type="button"
+            class="rounded bg-gray-700 text-xl p-2 border border-blue-300 border-opacity-25"
+            on:click={() => {axiomPreambleOpen = false; preparationsOpen = true;}}
+          >
+            Open Attachment
+            <span class="text-md text-gray-400">(Preparations.txt)</span>
+          </button>
+        {/if}
       {/if}
 
       {#if axiomsOpen} <!-- Triggers when they first open the axioms attachment -->
@@ -109,20 +123,27 @@
         </Typewriter>
 
         {#if showAxioms} <!-- Triggers after the title is displayed -->
-          {#if axiom === 1} <AxiomOneThroughFive /> {/if}
-          {#if axiom === 2} <AxiomSixThroughTen /> {/if}
-          {#if axiom === 3} <AxiomElevenThroughFifteen /> {/if}
-          {#if axiom === 4} <AxiomSixteenThroughTwenty /> {/if}
-          {#if axiom === 5} <AxiomTwentyOneThroughTwentyFive /> {/if}
-          {#if axiom === 6} <AxiomTwentySixThroughThirty /> {/if}
-          {#if axiom === 7} <AxiomThirtyOneThroughThirtyFive /> {/if}
-          {#if axiom === 8} <AxiomThirtySixThoughFourty /> {/if}
-          {#if axiom === 9} <AxiomFourtyOneThroughFortyFour /> {/if}
+        {#if axiom === 1} <AxiomsIntro /> {/if}
+        {#if axiom === 2} <AxiomOneThroughFive /> {/if}
+        {#if axiom === 3} <AxiomSixThroughTen /> {/if}
+        {#if axiom === 4} <AxiomElevenThroughFifteen /> {/if}
+        {#if axiom === 5} <AxiomSixteenThroughTwenty /> {/if}
+        {#if axiom === 6} <AxiomTwentyOneThroughTwentyFive /> {/if}
+        {#if axiom === 7} <AxiomTwentySixThroughThirty /> {/if}
+        {#if axiom === 8} <AxiomThirtyOneThroughThirtyFive /> {/if}
+        {#if axiom === 9} <AxiomThirtySixThoughFourty /> {/if}
+        {#if axiom === 10} <AxiomFourtyOneThroughFortyFour /> {/if}
 
           <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
         {/if}
       {/if}
+	  {#if preparationsOpen}
+        <Typewriter cascade on:done={() => { showPreparations = true; }}>
+          <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
+        </Typewriter>
 
+        {#if showPreparations}
+          <Preparations />
     {:else} <!-- Not Logged in -->
       <Typewriter interval={47} on:done={() => showLogin = true}>
         <h1 class="text-3xl">Welcome to the <span class="text-5xl text-delta-green">Δ</span> Secure Server v24.8</h1>
