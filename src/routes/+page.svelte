@@ -17,7 +17,8 @@
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
   import Preparations from '../components/Preparations.svelte';
   import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
-    
+  
+  // Centralized state management
   let showLogin = false,
     showTypedHeader = true,
     loggedIn = false,
@@ -31,6 +32,12 @@
     showAxioms = false,
     showPreparations = false;
 
+  // Function triggered after decryption finishes
+  const onDecryptFinish = () => {
+    loading = false;
+    navigationOpen = true;
+  };
+
   const jumpToNavigation = () => {
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
@@ -39,7 +46,7 @@
     if (showAxioms) showAxioms = false;
     axiom = 1;
     navigationOpen = true;
-  }
+  };
   
   const lastAxiom = () => {
     if (axiom === 1) {
@@ -90,7 +97,7 @@
     {/if}
 
     {#if loading}
-      <Decrypting on:finish={() => {console.log('Decrypting complete');setTimeout(() => { loading = false; navigationOpen = true; }, 380)}} />
+      <Decrypting on:finish={onDecryptFinish} />
     {/if}
 
     {#if navigationOpen}
@@ -124,7 +131,7 @@
     {/if}
 
     {#if axiomsOpen}
-      <Typewriter cascade on:done={() => { showAxioms = true; }}>
+      <Typewriter cascade on:done={() => { showAxioms = true; }} >
         <span class="text-delta-green text-lg"> ALPHONSE'S AXIOMS FOR AGENTS </span>
       </Typewriter>
 
@@ -145,7 +152,7 @@
     {/if}
 
     {#if preparationsOpen}
-      <Typewriter cascade on:done={() => { showPreparations = true; }}>
+      <Typewriter cascade on:done={() => { showPreparations = true; }} >
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
       </Typewriter>
 
