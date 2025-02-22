@@ -16,7 +16,8 @@
   import AxiomThirtySixThoughFourty from '../components/axioms/AxiomThirtySixThoughFourty.svelte';
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
   import Preparations from '../components/Preparations.svelte';
-  import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte'; <!-- New import -->
+  import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
+  <script lang="ts">
   
   let showLogin = false,
     showTypedHeader = true,
