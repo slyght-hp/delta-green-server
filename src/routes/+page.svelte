@@ -6,16 +6,12 @@
   import Navigation from '../components/Navigation.svelte';
   import Decrypting from '../components/Decrypting.svelte';
   import AxiomControls from '../components/axioms/AxiomControls.svelte';
-  import AxiomOneThroughFive from '../components/axioms/AxiomOneThroughFive.svelte';
-  import AxiomSixThroughTen from '../components/axioms/AxiomSixThroughTen.svelte';
-  import AxiomElevenThroughFifteen from '../components/axioms/AxiomElevenThroughFifteen.svelte';
-  import AxiomSixteenThroughTwenty from '../components/axioms/AxiomSixteenThroughTwenty.svelte';
-  import AxiomTwentyOneThroughTwentyFive from '../components/axioms/AxiomTwentyOneThroughTwentyFive.svelte';
-  import AxiomTwentySixThroughThirty from '../components/axioms/AxiomTwentySixThroughThirty.svelte';
-  import AxiomThirtyOneThroughThirtyFive from '../components/axioms/AxiomThirtyOneThroughThirtyFive.svelte';
-  import AxiomThirtySixThoughFourty from '../components/axioms/AxiomThirtySixThoughFourty.svelte';
-  import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
+  import AxiomOneThroughTen from '../components/axioms/AxiomOneThroughTen.svelte';
+  import AxiomElevenThroughTwenty from '../components/axioms/AxiomElevenThroughTwenty.svelte';
+  import AxiomTwentyOneThroughThirty from '../components/axioms/AxiomTwentyOneThroughThirty.svelte';
+  import AxiomThirtyOneThroughForty from '../components/axioms/AxiomThirtyOneThroughForty.svelte';
   import Preparations from '../components/Preparations.svelte';
+  import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
 
   let showLogin = false,
     showTypedHeader = true,
@@ -45,14 +41,14 @@
 
   const lastAxiom = () => {
     if (axiom === 1) {
-      axiom = 9;
+      axiom = 5;
     } else {
       axiom = axiom - 1;
     }
   };
 
   const nextAxiom = () => {
-    if (axiom === 9) {
+    if (axiom === 5) {
       axiom = 1;
     } else {
       axiom = axiom + 1;
@@ -107,14 +103,14 @@
     {#if axiomReadBtnAvailable}
       <button
         type="button"
-        class="rounded bg-slate-700 text-xlp-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
+        class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
           on:click={() => {axiomPreambleOpen = false; axiomsOpen = true;}}
         >
         Open Attachment
         <span class="text-md text-gray-400">(Axioms.txt)</span>
       </button>
   {/if}
-
+      
     {#if PreparationsReadBtnAvailable}
       <button
         type="button"
@@ -133,21 +129,17 @@
     </Typewriter>
 
     {#if showAxioms} <!-- Triggers after the title is displayed -->
-      {#if axiom === 1} <AxiomOneThroughFive /> {/if}
-      {#if axiom === 2} <AxiomSixThroughTen /> {/if}
-      {#if axiom === 3} <AxiomElevenThroughFifteen /> {/if}
-      {#if axiom === 4} <AxiomSixteenThroughTwenty /> {/if}
-      {#if axiom === 5} <AxiomTwentyOneThroughTwentyFive /> {/if}
-      {#if axiom === 6} <AxiomTwentySixThroughThirty /> {/if}
-      {#if axiom === 7} <AxiomThirtyOneThroughThirtyFive /> {/if}
-      {#if axiom === 8} <AxiomThirtySixThoughFourty /> {/if}
-      {#if axiom === 9} <AxiomFourtyOneThroughFortyFour /> {/if}
+      {#if axiom === 1} <AxiomsIntro /> {/if}
+      {#if axiom === 2} <AxiomOneThroughTen /> {/if}
+      {#if axiom === 3} <AxiomElevenThroughTwenty /> {/if}
+      {#if axiom === 4} <AxiomTwentyOneThroughThirty /> {/if}
+      {#if axiom === 5} <AxiomThirtyOneThroughForty /> {/if}
 
       <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
     {/if}
   {/if}<!-- Not Logged in -->
 
-    {#if PreparationsOpen} <!-- Triggers when they first open the Preparations attachment -->
+  {#if PreparationsOpen} <!-- Triggers when they first open the Preparations attachment -->
       <Typewriter cascade on:done={() => { showPreparations = true; }}>
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
       </Typewriter>
