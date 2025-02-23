@@ -24,15 +24,12 @@
     </li>
     <li>
       <p><span class="text-delta-green">23. Think carefully before you steer law enforcement officers toward the opposition.</span></p>
-      <p class="pl-6">  Law enforcement officers are unprepared for the supernatural and high casualties are likely.</p>
-      <p class="pl-6">  LEOs may not be prepared to prevent escapes or the loss of critical opposition assets.</p>
-      <p class="pl-6 mb-4">  They do, however, make an excellent distraction. </p>
+      <p class="pl-6 mb-4">  Law enforcement officers are unprepared for the supernatural and high casualties are likely.</p>
     </li>
     <li>
       <p><span class="text-delta-green">24. When embedded with an agency that is pursuing its legitimate remit, act with extreme caution.</span></p>
-      <p class="pl-6">  Remember that in this situation you are working without cover. </p>
       <p class="pl-6">  The host agency's goals are not our goals. </p>
-      <p class="pl-6 mb-4">  You may have to undermine their mission in order to accomplish our mission. </p>
+      <p class="pl-6 mb-4">  You may have to undermine their mission in order to accomplish ours. </p>
     </li>
   </ol>
 </Typewriter>
