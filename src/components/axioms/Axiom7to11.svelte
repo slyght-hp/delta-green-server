@@ -28,10 +28,8 @@
     </li>
     <li>
       <p><span class="text-delta-green">11. Always establish a rally point in case the team has to scatter and regroup.</span></p>
-      <p class="pl-6">  The rally point should be tactically advantageous in the event that not </p>
-      <p class="pl-6">  everyone manages to shake pursuers and the opportunity arises to ambush them.</p>
-      <p class="pl-6">  The rally point should be pre-stocked with anything you need to escape </p>
-      <p class="pl-6 mb-4">  the opposition: money, travel documents, a spare vehicle if you can manage it.</p>
+      <p class="pl-6">  The rally point should be tactically advantageous in the event that not everyone manages to shake pursuers and the opportunity arises to ambush them.</p>
+      <p class="pl-6 mb-4">  The rally point should be pre-stocked with anything you need to escape.</p>
     </li>
   </ol>
 </Typewriter>
