@@ -16,8 +16,7 @@
     </li>
     <li>
       <p><span class="text-delta-green">14. Don't wait until you see the whites of their eyes.</span></p>
-      <p class="pl-6">  If firearms have no effect, it's best to find that out </p>
-      <p class="pl-6 mb-4">  while you still have the time and the space to break contact. </p>
+      <p class="pl-6 mb-4">  If firearms have no effect, it's best to find that out while you still have the time and the space to break contact.</p>
     </li>
     <li>
       <p><span class="text-delta-green">15. Give no "fair warnings."</span></p>
