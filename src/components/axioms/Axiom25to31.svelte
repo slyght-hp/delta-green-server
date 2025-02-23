@@ -36,4 +36,4 @@
       <p class="pl-6 mb-4">  Flush them out and ambush their escape route. </p>
     </li>
   </ol>
-</typewriter>
+</Typewriter>
