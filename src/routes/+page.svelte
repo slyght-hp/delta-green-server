@@ -114,7 +114,6 @@
      />
   {/if}
 
-  {#if axiomPreambleOpen}
     <AxiomPreamble on:finish={() => { preparationsReadBtnAvailable = true; }} />
       
     {#if preparationsReadBtnAvailable}
