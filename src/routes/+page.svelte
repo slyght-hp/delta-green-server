@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import {user} from '../stores/user';
   import Typewriter from 'svelte-typewriter';
   import LogInForm from '../components/LogInForm.svelte';
@@ -6,12 +6,12 @@
   import Navigation from '../components/Navigation.svelte';
   import Decrypting from '../components/Decrypting.svelte';
   import AxiomControls from '../components/axioms/AxiomControls.svelte';
-  import Axiom1-6 from '../components/axioms/Axiom1-6.svelte';
-  import Axiom7-11 from '../components/axioms/Axiom7-11.svelte';
-  import Axiom12-18 from '../components/axioms/Axiom12-18.svelte';
-  import Axiom19-24 from '../components/axioms/Axiom19-24.svelte';
-  import Axiom25-31 from '../components/axioms/Axiom25-31.svelte';
-  import Axiom32-37 from '../components/axioms/Axiom32-37.svelte';
+  import Axiom1to6 from '../components/axioms/Axiom1to6.svelte';
+  import Axiom7to11 from '../components/axioms/Axiom7to11.svelte';
+  import Axiom12to18 from '../components/axioms/Axiom12to18.svelte';
+  import Axiom19to24 from '../components/axioms/Axiom19to24.svelte';
+  import Axiom25to31 from '../components/axioms/Axiom25to31.svelte';
+  import Axiom32to37 from '../components/axioms/Axiom32to37.svelte';
   import Preparations from '../components/Preparations.svelte';
   import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
 
@@ -29,7 +29,7 @@
     showPreparations = false,
     PreparationsOpen = false;
 
-  const jumpToNavigation = () => {
+    const jumpToNavigation = () => {
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
     if (axiomReadBtnAvailable) axiomReadBtnAvailable = false;
@@ -42,21 +42,21 @@
     navigationOpen = true;
   }
 
-  const lastAxiom = () => {
-    if (axiom === 1) {
-      axiom = 7;
-    } else {
-      axiom = axiom - 1;
-    }
-  };
+const lastAxiom = () => {
+  if (axiom === 1) {
+    axiom = 7;
+  } else {
+    axiom = axiom - 1;
+  }
+};
 
-  const nextAxiom = () => {
-    if (axiom === 7) {
-      axiom = 1;
-    } else {
-      axiom = axiom + 1;
-    }
-  };
+const nextAxiom = () => {
+  if (axiom === 7) {
+    axiom = 1;
+  } else {
+    axiom = axiom + 1;
+  }
+};
 </script>
 
 <svelte:head>
@@ -133,12 +133,12 @@
 
     {#if showAxioms} <!-- Triggers after the title is displayed -->
       {#if axiom === 1} <AxiomsIntro /> {/if}
-      {#if axiom === 2} <Axiom1-6 /> {/if}
-      {#if axiom === 3} <Axiom7-11 /> {/if}
-      {#if axiom === 4} <Axiom12-18 /> {/if}
-      {#if axiom === 5} <Axiom19-24 /> {/if}
-      {#if axiom === 6} <Axiom25-31 /> {/if}
-      {#if axiom === 7} <Axiom32-37 /> {/if}
+      {#if axiom === 2} <Axiom1to6 /> {/if}
+      {#if axiom === 3} <Axiom7to11 /> {/if}
+      {#if axiom === 4} <Axiom12to18 /> {/if}
+      {#if axiom === 5} <Axiom19to24 /> {/if}
+      {#if axiom === 6} <Axiom25to31 /> {/if}
+      {#if axiom === 7} <Axiom32to37 /> {/if}
 
       <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
     {/if}
