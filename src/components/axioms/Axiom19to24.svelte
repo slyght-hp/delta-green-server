@@ -17,8 +17,6 @@
     </li>
     <li>
       <p><span class="text-delta-green">21. Don't ever go into any place if you don't know how to get out.</span></p>
-      <p class="pl-6">  This includes buildings, neighborhoods, cities, states and countries. </p>
-      <p class="pl-6">  Always work backwards. </p>
       <p class="pl-6 mb-4">  Establish your line of retreat first. </p>
     </li>
     <li>
