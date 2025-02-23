@@ -6,10 +6,12 @@
   import Navigation from '../components/Navigation.svelte';
   import Decrypting from '../components/Decrypting.svelte';
   import AxiomControls from '../components/axioms/AxiomControls.svelte';
-  import AxiomOneThroughTen from '../components/axioms/AxiomOneThroughTen.svelte';
-  import AxiomElevenThroughTwenty from '../components/axioms/AxiomElevenThroughTwenty.svelte';
-  import AxiomTwentyOneThroughThirty from '../components/axioms/AxiomTwentyOneThroughThirty.svelte';
-  import AxiomThirtyOneThroughForty from '../components/axioms/AxiomThirtyOneThroughForty.svelte';
+  import Axiom1-6 from '../components/axioms/Axiom1-6.svelte';
+  import Axiom7-11 from '../components/axioms/Axiom7-11.svelte';
+  import Axiom12-18 from '../components/axioms/Axiom12-18.svelte';
+  import Axiom19-24 from '../components/axioms/Axiom19-24.svelte';
+  import Axiom25-31 from '../components/axioms/Axiom25-31.svelte';
+  import Axiom32-37 from '../components/axioms/Axiom32-37.svelte';
   import Preparations from '../components/Preparations.svelte';
   import AxiomsIntro from '../components/axioms/AxiomsIntro.svelte';
 
@@ -42,14 +44,14 @@
 
   const lastAxiom = () => {
     if (axiom === 1) {
-      axiom = 5;
+      axiom = 7;
     } else {
       axiom = axiom - 1;
     }
   };
 
   const nextAxiom = () => {
-    if (axiom === 5) {
+    if (axiom === 7) {
       axiom = 1;
     } else {
       axiom = axiom + 1;
@@ -131,10 +133,12 @@
 
     {#if showAxioms} <!-- Triggers after the title is displayed -->
       {#if axiom === 1} <AxiomsIntro /> {/if}
-      {#if axiom === 2} <AxiomOneThroughTen /> {/if}
-      {#if axiom === 3} <AxiomElevenThroughTwenty /> {/if}
-      {#if axiom === 4} <AxiomTwentyOneThroughThirty /> {/if}
-      {#if axiom === 5} <AxiomThirtyOneThroughForty /> {/if}
+      {#if axiom === 2} <Axiom1-6 /> {/if}
+      {#if axiom === 3} <Axiom7-11 /> {/if}
+      {#if axiom === 4} <Axiom12-18 /> {/if}
+      {#if axiom === 5} <Axiom19-24 /> {/if}
+      {#if axiom === 6} <Axiom25-31 /> {/if}
+      {#if axiom === 7} <Axiom32-37 /> {/if}
 
       <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
     {/if}
