@@ -10,13 +10,13 @@
 
   <p class="text-center"> Maybe it started with him, but it's been making the rounds a long time. </p>
 
-  <p class="text-center"> Who knows how many of us have added to it over the years? </p>
+  <p class="text-center pb-4"> Who knows how many of us have added to it over the years? </p>
 
   <ul class="flex flex-col items-center pb-4">
-  <li class="text-center w-full">It all comes back to the <span class="text-delta-green">same old mission</span>: </li>
+  <li class="text-center w-full pb-4">It all comes back to the <span class="text-delta-green">same old mission</span>: </li>
   <li class="self-start">Find the threat</li>
   <li class="self-start">Stop the threat</li>
-  <li class="self-start">Cover it up so it's like the threat never happened</li>
+  <li class="self-start pb-4">Cover it up so it's like the threat never happened</li>
 
   <p class="text-center"> Keep these rules close. They might just save your life. </p>
   
