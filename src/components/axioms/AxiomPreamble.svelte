@@ -22,6 +22,6 @@
 	
   <p class="text-center"> Time is of the essence. </p>
 
-  <p class="text-center"> You will find further details in the attached files. </p>
+  <p class="text-center pb-4"> You will find further details in the attached files. </p>
 
 </Typewriter>
