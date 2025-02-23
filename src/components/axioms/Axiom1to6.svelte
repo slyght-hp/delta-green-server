@@ -9,7 +9,7 @@
       <p><span class="text-delta-green">1.The first commandment is, Thou shall not get caught.</span></p>
       <p class="pl-6">  You do not have a "get out of jail free" card. You do not have a license to kill. </p>
       <p class="pl-6">  To the world outside Delta Green, you are a criminal, a terrorist and a traitor.</p>
-      <p class="pl-6">  If you are arrested, you will keep quiet and say nothing.</p>
+      <p class="pl-6 mb-4">  If you are arrested, you will keep quiet and say nothing.</p>
     </li>
     <li>
       <p><span class="text-delta-green">2. Always have your go-bag packed and ready for an operation</span> <em>(Or, as agents have taking to calling it, a Night at the Opera).</em></p>
