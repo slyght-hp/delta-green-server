@@ -107,7 +107,7 @@
     {#if axiomReadBtnAvailable}
       <button
         type="button"
-        class="rounded bg-slate-700 text-xlp-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
+        class="rounded bg-slate-700 text-xlp-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
           on:click={() => {axiomPreambleOpen = false; axiomsOpen = true;}}
         >
         Open Attachment
@@ -118,7 +118,7 @@
     {#if PreparationsReadBtnAvailable}
       <button
         type="button"
-        class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
+        class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
           on:click={() => { axiomPreambleOpen = false; PreparationsOpen = true; }}
         >
         Open Attachment
@@ -149,7 +149,6 @@
 
     {#if PreparationsOpen} <!-- Triggers when they first open the Preparations attachment -->
       <Typewriter cascade on:done={() => { showPreparations = true; }}>
-        Preparations for Operatives
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
       </Typewriter>
 
