@@ -116,8 +116,7 @@
      />
   {/if}
 
-  {#if axiomsOpen}
-  <!-- Axioms button has been clicked, now show the Preparations button below it -->      
+    {#if PreparationsReadBtnAvailable}
       <button
         type="button"
         class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
