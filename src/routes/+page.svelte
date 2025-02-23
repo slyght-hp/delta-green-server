@@ -35,7 +35,7 @@
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
     if (axiomReadBtnAvailable) axiomReadBtnAvailable = false;
-    if (PreparationsReadBtnAvailable) PeparationsReadBtnAvailable = false;
+    if (PreparationsReadBtnAvailable) PreparationsReadBtnAvailable = false;
     if (axiomsOpen) axiomsOpen = false;
     if (showAxioms) showAxioms = false;
     if (showPreparations) showPreparations = false;
@@ -152,6 +152,7 @@
 
     {#if showPreparations}
       <Typewriter cascade on:done={() => { showPreparations = true; }}>
+        Preparations for Operatives
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
       </Typewriter>
 
