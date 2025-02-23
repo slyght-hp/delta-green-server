@@ -27,8 +27,9 @@
     preparationsReadBtnAvailable = false,
     axiomsOpen = false,
     axiom = 1,
-    showAxioms = false;
-    showPreparations = false;
+    showAxioms = false,
+    showPreparations = false,
+    PreparationsOpen = false
 
   const jumpToNavigation = () => {
     if (loading) loading = false;
