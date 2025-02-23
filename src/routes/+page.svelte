@@ -35,6 +35,7 @@
     if (axiomsOpen) axiomsOpen = false;
     if (showAxioms) showAxioms = false;
     if (showPreparations) showPreparations = false;
+    if (PreparationsOpen) PreparationsOpen = false;
     axiom = 1;
     navigationOpen = true;
   }
@@ -104,7 +105,7 @@
       <button
         type="button"
         class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
-          on:click={() => {axiomPreambleOpen = false; axiomsOpen = true;}}
+          on:click={() => {axiomPreambleOpen = false; axiomsOpen = true; showPreparations = false;}}
         >
         Open Attachment
         <span class="text-md text-gray-400">(Axioms.txt)</span>
@@ -115,7 +116,7 @@
       <button
         type="button"
         class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
-          on:click={() => { axiomPreambleOpen = false; PreparationsOpen = true; }}
+          on:click={() => { axiomPreambleOpen = false; PreparationsOpen = true; showAxioms = false;}}
         >
         Open Attachment
         <span class="text-md text-gray-400">(Preparations.txt)</span>
