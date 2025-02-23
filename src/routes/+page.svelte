@@ -147,7 +147,7 @@
     {/if}
   {/if}<!-- Not Logged in -->
 
-    {#if showPreparations}
+    {#if PreparationsOpen} <!-- Triggers when they first open the Preparations attachment -->
       <Typewriter cascade on:done={() => { showPreparations = true; }}>
         Preparations for Operatives
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
