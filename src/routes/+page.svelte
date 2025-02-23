@@ -111,7 +111,10 @@
         Open Attachment
         <span class="text-md text-gray-400">(Axioms.txt)</span>
       </button>
+     />
+  {/if}
 
+  {#if axiomPreambleOpen}
     <AxiomPreamble on:finish={() => { preparationsReadBtnAvailable = true; }} />
       
     {#if preparationsReadBtnAvailable}
