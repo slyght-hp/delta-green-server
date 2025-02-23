@@ -37,4 +37,4 @@
       <p class="pl-6 mb-4">  You may have to undermine their mission in order to accomplish our mission. </p>
     </li>
   </ol>
-</typewriter>
+</Typewriter>
