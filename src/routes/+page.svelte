@@ -127,6 +127,7 @@
         Open Attachment
         <span class="text-md text-gray-400">(Preparations.txt)</span>
       </button>
+     />
     {/if}
   {/if}
 
