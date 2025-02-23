@@ -17,7 +17,7 @@
     <li class="self-start">1) Determine who or what is killing the people of Hellbend.</li>
     <li class="self-start">2) If the threat is unnatural, isolate it and destroy it.</li>
     <li class="self-start">3) Close the case so law enforcement doesn't look any closer.</li>
-    <li class="self-start">4) 4) Leave no witnesses to any unnatural events.</li>
+    <li class="self-start">4) Leave no witnesses to any unnatural events.</li>
   </ul>
 	
   <p class="text-center"> Time is of the essence. </p>
