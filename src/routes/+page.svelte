@@ -102,7 +102,7 @@
   {/if}
 
   {#if axiomPreambleOpen}
-    <AxiomPreamble onFinish={() => {axiomReadBtnAvailable = true}} />
+    <AxiomPreamble onFinish={() => {axiomReadBtnAvailable = true; PreparationsReadBtnAvailable = true}} />
 
     {#if axiomReadBtnAvailable}
       <button
