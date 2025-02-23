@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import {user} from '../stores/user';
   import Typewriter from 'svelte-typewriter';
   import LogInForm from '../components/LogInForm.svelte';
