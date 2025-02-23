@@ -9,11 +9,6 @@
   <br />
   <ol>
     <li>
-      <p><span class="text-delta-green">30. Calculate the opposition's strength and identity from a prudent distance.</span></p>
-      <p class="pl-6">  Send in closer reconnaissance only after all other options are exhausted. </p>
-      <p class="pl-6 mb-4">  Take your time. </p>
-    </li>
-    <li>
       <p><span class="text-delta-green">31. When you don't have enough force to assault the opposition's stronghold, burn it.</span></p>
       <p class="pl-6 mb-4">  Flush them out and ambush their escape route. </p>
     </li>
