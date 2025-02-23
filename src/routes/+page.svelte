@@ -147,5 +147,15 @@
       <AxiomControls lastFn={lastAxiom} nextFn={nextAxiom} />
     {/if}
   {/if}<!-- Not Logged in -->
-{/if}
+
+    {#if preparationsOpen}
+      <Typewriter cascade on:done={() => { showPreparations = true; }}>
+        <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
+      </Typewriter>
+
+      {#if showPreparations}
+        <Preparations />
+      {/if}
+    {/if}
+  {/if}
 </div>
