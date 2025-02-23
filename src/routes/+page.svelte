@@ -15,6 +15,7 @@
   import AxiomThirtyOneThroughThirtyFive from '../components/axioms/AxiomThirtyOneThroughThirtyFive.svelte';
   import AxiomThirtySixThoughFourty from '../components/axioms/AxiomThirtySixThoughFourty.svelte';
   import AxiomFourtyOneThroughFortyFour from '../components/axioms/AxiomFourtyOneThroughFortyFour.svelte';
+  import Preparations from '../components/Preparations.svelte';
 
   let showLogin = false,
     showTypedHeader = true,
@@ -23,14 +24,17 @@
     navigationOpen = false,
     axiomPreambleOpen = false,
     axiomReadBtnAvailable = false,
+    preparationsReadBtnAvailable = false,
     axiomsOpen = false,
     axiom = 1,
     showAxioms = false;
+    showPreparations = false;
 
   const jumpToNavigation = () => {
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
     if (axiomReadBtnAvailable) axiomReadBtnAvailable = false;
+    if (preparationsReadBtnAvailable) preparationsReadBtnAvailable = false;
     if (axiomsOpen) axiomsOpen = false;
     if (showAxioms) showAxioms = false;
     axiom = 1;
@@ -106,6 +110,18 @@
         >
         Open Attachment
         <span class="text-md text-gray-400">(Axioms.txt)</span>
+      </button>
+
+    <AxiomPreamble on:finish={() => { preparationsReadBtnAvailable = true; }} />
+      
+    {#if preparationsReadBtnAvailable}
+      <button
+        type="button"
+        class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
+          on:click={() => { axiomPreambleOpen = false; preparationsOpen = true; }}
+        >
+        Open Attachment
+        <span class="text-md text-gray-400">(Preparations.txt)</span>
       </button>
     {/if}
   {/if}
