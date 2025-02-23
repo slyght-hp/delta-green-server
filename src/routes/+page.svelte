@@ -24,20 +24,21 @@
     navigationOpen = false,
     axiomPreambleOpen = false,
     axiomReadBtnAvailable = false,
-    preparationsReadBtnAvailable = false,
+    PreparationsReadBtnAvailable = false,
     axiomsOpen = false,
     axiom = 1,
     showAxioms = false,
     showPreparations = false,
-    PreparationsOpen = false
+    PreparationsOpen = false;
 
   const jumpToNavigation = () => {
     if (loading) loading = false;
     if (axiomPreambleOpen) axiomPreambleOpen = false;
     if (axiomReadBtnAvailable) axiomReadBtnAvailable = false;
-    if (preparationsReadBtnAvailable) preparationsReadBtnAvailable = false;
+    if (PreparationsReadBtnAvailable) PeparationsReadBtnAvailable = false;
     if (axiomsOpen) axiomsOpen = false;
     if (showAxioms) showAxioms = false;
+    if (showPreparations) showPreparations = false;
     axiom = 1;
     navigationOpen = true;
   }
@@ -115,13 +116,13 @@
      />
   {/if}
 
-    <AxiomPreamble on:finish={() => { preparationsReadBtnAvailable = true; }} />
+    <AxiomPreamble on:finish={() => { PreparationsReadBtnAvailable = true; }} />
       
-    {#if preparationsReadBtnAvailable}
+    {#if PreparationsReadBtnAvailable}
       <button
         type="button"
         class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green"
-          on:click={() => { axiomPreambleOpen = false; preparationsOpen = true; }}
+          on:click={() => { axiomPreambleOpen = false; PreparationsOpen = true; }}
         >
         Open Attachment
         <span class="text-md text-gray-400">(Preparations.txt)</span>
@@ -149,7 +150,7 @@
     {/if}
   {/if}<!-- Not Logged in -->
 
-    {#if preparationsOpen}
+    {#if showPreparations}
       <Typewriter cascade on:done={() => { showPreparations = true; }}>
         <span class="text-delta-green text-lg"> PREPARATIONS FOR OPERATIVES </span>
       </Typewriter>
