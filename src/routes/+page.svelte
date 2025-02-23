@@ -113,7 +113,6 @@
         Open Attachment
         <span class="text-md text-gray-400">(Axioms.txt)</span>
       </button>
-     />
   {/if}
 
     {#if PreparationsReadBtnAvailable}
@@ -124,8 +123,7 @@
         >
         Open Attachment
         <span class="text-md text-gray-400">(Preparations.txt)</span>
-      </button>
-     />  
+      </button>  
     {/if}
   {/if}
 
