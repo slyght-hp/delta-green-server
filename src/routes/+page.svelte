@@ -101,7 +101,7 @@ const nextAxiom = () => {
   {/if}
 
   {#if axiomPreambleOpen}
-    <AxiomPreamble onFinish={() => {axiomReadBtnAvailable = true; PreparationsReadBtnAvailable = true}} />
+    <AxiomPreamble onFinish={() => {PreparationsReadBtnAvailable = true; axiomReadBtnAvailable = true}} />
 
     {#if axiomReadBtnAvailable}
       <button
@@ -118,7 +118,7 @@ const nextAxiom = () => {
       <button
         type="button"
         class="rounded bg-slate-700 text-xl p-2 border border-blue-300 border-opacity-25 hover:border-delta-green mb-4"
-          on:click={() => { axiomPreambleOpen = false; PreparationsOpen = true; showAxioms = false;}}
+          on:click={() => {axiomPreambleOpen = false; PreparationsOpen = true; showAxioms = false;}}
         >
         Open Attachment
         <span class="text-md text-gray-400">(Preparations.txt)</span>
